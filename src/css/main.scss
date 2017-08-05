@@ -11,27 +11,11 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-html::after {
-  content: '';
-  filter: url(#f1); // apply the svg blur filter
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  background: inherit;
-  z-index: -1;
-}
 body {
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.5)
 }
-svg {
-  height: 0;
-  width: 0;
-}
-
 /////////////////////
 // GENERAL STYLING //
 /////////////////////
