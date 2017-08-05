@@ -50,9 +50,11 @@ form {
   }
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgba(0,0,0,0.4);
+    text-align: center;
   }
   ::-moz-placeholder { /* Firefox 19+ */
     color: rgba(0,0,0,0.4);
+    text-align: center;
   }
   #submit-btn-box {
     padding: 60px 0;
