@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hacker of Empires</title>
+    <meta name="description" content="Hacker of Empires: SCS Concordia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+  </head>
+  <body>
+    <!-- For the background image blur -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="f1" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="main-header-box" class="fade-in">
+      <div id="main-header">
+        <h1>Hacker of Empires</h1>
+      </div>
+      <div class="swords">
+        <div id="left-sword" class="sword">
+          <div class="knight">
+            <div class="blade"></div>
+            <div class="guard"></div>
+            <div class="grip"></div>
+            <div class="knob"></div>
+          </div>
+        </div>
+        <div id="right-sword" class="sword">
+          <div class="knight">
+            <div class="blade"></div>
+            <div class="guard"></div>
+            <div class="grip"></div>
+            <div class="knob"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <label>Major</label>
+      <span class="custom-dropdown">
+        <select>
+          <option value="aero">Aerospace Engineering</option>
+          <option value="building">Building Engineering</option>
+          <option value="civil">Civil Engineering</option>
+          <option value="compeng">Computer Engineering</option>
+          <option value="compsci">Computer Science</option>
+          <option value="elec">Electrical Engineering</option>
+          <option value="environmental">Environmental Engineering</option>
+          <option value="indu">Industrial Engineering</option>
+          <option value="mech">Mechanical Engineering</option>
+          <option value="soen">Software Engineering</option>
+        </select>
+      </span>
+      <label>Favorite Color</label>
+      <span class="custom-dropdown">
+        <select>
+          <option value="white">White</option>
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="black">Black</option>
+        </select>
+      </span>
+      <label>Favorite Programming Language</label>
+      <span class="custom-dropdown">
+        <select>
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="cpp">C / C++</option>
+          <option value="php">PHP</option>
+          <option value="c#">C#</option>
+          <option value="js">Javascript</option>
+          <option value="ruby">Ruby</option>
+          <option value="haskell">Haskell</option>
+          <option value="asm">Assembly</option>
+          <option value="sql">SQL</option>
+          <option value="lisp">Lisp</option>
+          <option value="go">Go</option>
+          <option value="rust">Rust</option>
+        </select>
+      </span>
+      <label>Email</label>
+      <input type="text" placeholder="linus-the-mighty@example.com" />
+      <div id="submit-btn-box">
+        <button class="btn btn--stripe">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
