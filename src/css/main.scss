@@ -5,7 +5,7 @@ html {
   min-height: 100%;
   min-width: 100%;
   font-family: 'Metamorphous', cursive;
-  background: url(img/bg.png) no-repeat center center fixed;
+  background: url(img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,6 +33,7 @@ body {
 }
 
 form {
+  margin-top: 80px;
   text-align: center;
   color: #fff;
   font-size: 1.7rem;
@@ -91,62 +92,25 @@ form {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
 }
 
 .custom-dropdown select {
   background-color: rgba(255,255,255,0.9);
+  width: 50%;
   color: rgba(0,0,0,0.4);
   font-size: inherit;
+  text-align: center;
+  text-align-last: center;
   padding: .5em;
-  padding-right: 2.5em;
+  padding-right: 1.5em;
   border: 0;
   margin: 0;
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: '';
-  appearance: button; /* hide default arrow in chrome OSX */
 }
 
-.custom-dropdown::before,
-.custom-dropdown::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
-  height: 1em;
-  font-size: .625em;
-  line-height: 1;
-  right: 1.2em;
-  top: 50%;
-  margin-top: -.5em;
-}
-
-.custom-dropdown::before { /*  Custom dropdown arrow cover */
-  width: 2em;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 3px 3px 0;
-}
-
-.custom-dropdown select[disabled] {
-  color: rgba(0,0,0,.3);
-}
-
-.custom-dropdown select[disabled]::after {
-  color: rgba(0,0,0,.1);
-}
-
-.custom-dropdown::before {
-  background-color: rgba(0,0,0,.15);
-}
-
-.custom-dropdown::after {
-  color: rgba(0,0,0,.4);
-}
 
 /////////////////////////
 // FANCY SUBMIT BUTTON //
@@ -325,5 +289,25 @@ $border-color-hover: $color-black;
 @keyframes left-attack {
   from { transform: rotate(360deg); }
   to { transform: rotate(0deg); }
+}
+
+
+@media all and (max-width: 480px) {
+  form input, .custom-dropdown select {
+      width: 80%;
+    }
+  .sword {
+    margin: 3.5rem;
+
+    .knight {
+      width: 2.5rem;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .knight {
+    width: 1rem;
+  }
 }
 
