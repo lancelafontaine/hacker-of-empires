@@ -83,7 +83,15 @@ titles = [
 
 skills = {
     "misc": [
-        ""
+        "Doing the dishes",
+        "Turning left",
+        "Fluffing your pillows",
+        "Watching Game of Thrones",
+        "Writing for loops",
+        "Making HotPockets",
+        "Arguing about performance without benchmarking",
+        "Caching everything",
+        "pwning teh noobz"
     ],
     "java": [
         "Chugging",
