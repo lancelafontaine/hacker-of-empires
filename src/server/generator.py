@@ -1,17 +1,20 @@
 from random import SystemRandom
 import data
-from flask import Flask
-from flask import jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/')
-def generator(request):
-    program = request.form["major"]
-    language = request.form["language"]
-    colour = request.form["colour"]
+@app.route('/', methods=["POST", "OPTIONS"])
+def generator():
+    if request.method == "OPTIONS":
+        return jsonify({})
+    if request.method == "POST":
+        data = request.get_json()
+        program = data.get("major", "Software Engineering")
+        language = data.get("language", "Java")
+        colour = data.get("colour", "Blue")
 
-    return jsonify(text=generate(program, language, colour))
+        return jsonify(text=generate(program, language, colour))
 
 def generate(program, language, colour):
     rand = SystemRandom()
@@ -37,10 +40,14 @@ def generate(program, language, colour):
                skill_nums[1], language_skill,
                skill_nums[2], colour_skill)
 
+    print(final)
+    print(final)
+    print(final)
+    print(final)
+
     return final
 
 
-# if __name__ == "__main__":
-    
-#     character = generate("Computer Engineering", "Java", "Blue")
-#     print(character)
+if __name__ == "__main__":
+    character = generate("Computer Engineering", "Java", "Blue")
+    app.run()

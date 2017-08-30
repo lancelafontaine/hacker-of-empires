@@ -4,5 +4,12 @@
 
 ## Development
 
+### Client
+- `cd src/client`
 - `npm install`
 - `npm start`
+
+### Server
+- `cd src/server`
+- `python3 -m pip install -r requirements.txt`
+- `python3 generator.py`
