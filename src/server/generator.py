@@ -10,9 +10,11 @@ def generator():
         return jsonify({})
     if request.method == "POST":
         data = request.get_json()
-        program = data.get("major", "Software Engineering")
-        language = data.get("language", "Java")
-        colour = data.get("colour", "Blue")
+        program = data.get("major", "soen").strip().lower()
+        language = data.get("language", "java").strip().lower()
+        colour = data.get("colour", "blue").strip().lower()
+
+        # Save information to DB here
 
         return jsonify(text=generate(program, language, colour))
 
@@ -23,31 +25,31 @@ def generate(program, language, colour):
     first_name = rand.choice(data.first_names)
     title = rand.choice(data.titles)
 
-    misc_skill = rand.choice(data.skills["Misc"])
+    misc_skill = rand.choice(data.skills["misc"])
     language_skill = rand.choice(data.skills[language])
     colour_skill = rand.choice(data.skills[colour])
     skill_nums = [rand.randint(-10, 10) for i in range(3)]
     skill_nums = [i if i < 0 else "+{}".format(i) for i in skill_nums]
 
-    final = """
-    {} {}, {}
+    response_data = {
+        "first_name": first_name,
+        "title": title,
+        "class_name": class_name,
+        "misc_skill": {
+            "number": skill_nums[0],
+            "skill": misc_skill
+        },
+        "language_skill": {
+            "number": skill_nums[1],
+            "skill": language_skill
+        },
+        "colour_skill": {
+            "number": skill_nums[2],
+            "skill": colour_skill
+        }
+    }
 
-    {} {}
-    {} {}
-    {} {}
-    """.format(first_name, title, class_name,
-               skill_nums[0], misc_skill,
-               skill_nums[1], language_skill,
-               skill_nums[2], colour_skill)
-
-    print(final)
-    print(final)
-    print(final)
-    print(final)
-
-    return final
-
+    return response_data
 
 if __name__ == "__main__":
-    character = generate("Computer Engineering", "Java", "Blue")
     app.run()
