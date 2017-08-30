@@ -13,40 +13,40 @@ gulp.task('default', () => {
 });
 
 gulp.task('html', () => {
-  return gulp.src('src/index.html')
+  return gulp.src('index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('../../'))
     .pipe(connect.reload());
 });
 
 gulp.task('sass', () => {
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
-    'src/css/main.scss'
+    'css/main.scss'
   ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('../../'))
     .pipe(connect.reload());
 });
 
 gulp.task('js', () => {
   return rollup('rollup.config.js')
     .pipe(source('app.min.js'))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('../../'))
     .pipe(connect.reload());
 });
 
 gulp.task('serve', () => {
   connect.server({
-    root: '.',
+    root: '../../',
     livereload: true
   });
 });
 
 gulp.task('watch', () => {
-  gulp.watch(['src/index.html'], ['html']);
-  gulp.watch(['src/css/*.scss'], ['sass']);
-  gulp.watch(['src/js/*.js'], ['js']);
+  gulp.watch(['index.html'], ['html']);
+  gulp.watch(['css/*.scss'], ['sass']);
+  gulp.watch(['js/*.js'], ['js']);
 });
