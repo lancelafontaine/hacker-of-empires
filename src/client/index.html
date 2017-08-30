@@ -33,10 +33,10 @@
         </div>
       </div>
     </div>
-    <form>
+    <form id="form">
       <label>Major</label>
       <span class="custom-dropdown">
-        <select>
+        <select id="major">
           <option value="aero">Aerospace Engineering</option>
           <option value="building">Building Engineering</option>
           <option value="civil">Civil Engineering</option>
@@ -49,9 +49,9 @@
           <option value="soen">Software Engineering</option>
         </select>
       </span>
-      <label>Favorite Color</label>
+      <label>Favorite Colour</label>
       <span class="custom-dropdown">
-        <select>
+        <select id="colour">
           <option value="white">White</option>
           <option value="blue">Blue</option>
           <option value="red">Red</option>
@@ -61,7 +61,7 @@
       </span>
       <label>Programming Language Most Interested In</label>
       <span class="custom-dropdown">
-        <select>
+        <select id="language">
           <option value="java">Java</option>
           <option value="python">Python</option>
           <option value="cpp">C / C++</option>
@@ -79,11 +79,13 @@
         </select>
       </span>
       <label>Email</label>
-      <input type="text" placeholder="linus-the-mighty@example.com" />
+      <input id="email" type="email" placeholder="linus-the-mighty@example.com" required />
       <div id="submit-btn-box">
-        <label>I consent to sending this information to SCS Concordia and subscribing to SCS Concordia's newsletter</label>
-        <button class="btn btn--stripe">Submit</button>
+        <label>By clicking "Submit", I consent to sending this information to SCS Concordia and subscribing to SCS Concordia's newsletter.</label>
+        <button type="submit" id="submit" class="btn btn--stripe">Submit</button>
       </div>
     </form>
   </body>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src='app.min.js' type='text/javascript'></script>
 </html>
