@@ -5,23 +5,30 @@ classes = {
         "Bringer of Light"
     ],
     "building": [
-        "Wearer of Clay Pots"
+        "Wearer of Clay Pots",
+        "Creator of Arches",
+        "Respecter of Codes"
     ],
     "civil": [
         "Cloud Architect",
-        "Triceracop"
+        "Triceracop",
+        "City Scraper"
     ],
     "compeng": [
         "Richard Stallman Impersonator",
-        "Graphics Card Smuggler"
+        "Graphics Card Smuggler",
+        "Neckbeard Hugger",
+        "BSD Sympathizer"
     ],
     "compsci": [
         "Horse Surgeon",
-        "Travelling Salesman"
+        "Travelling Salesman",
+        "Turing Doppelganger"
     ],
     "elec": [
         "Storm Chaser",
-        "Glass Blower"
+        "Glass Blower",
+        "Solderer of Souls"
     ],
     "environmental": [
         "Witch",
@@ -35,11 +42,15 @@ classes = {
     ],
     "mech": [
         "Blacksmith",
-        "Rocket Scientist"
+        "Rocket Scientist",
+        "Master of Motion"
     ],
     "soen": [
         "Rick",
-        "Legolas Fan"
+        "Legolas Fan",
+        "Architecture Nerd",
+        "Design Pattern Afficionado",
+        "Packet Pusher"
     ]
 }
 
@@ -47,12 +58,27 @@ first_names = [
     "SYN",
     "Ada",
     "U+00A9",
-    "0x1f4a9"
+    "0x1f4a9",
+    "Sergey",
+    "Woz",
+    "Grace",
+    "TimBL",
+    "Matz",
+    "Boole",
+    "Guido",
+    "DHH",
+    "Wolfram"
 ]
 
 titles = [
     "the Unburnt",
-    "spawn of Knuth"
+    "spawn of Knuth",
+    "Lord of 1's and 0's",
+    "Desecrator of Algorithms",
+    "the Mad",
+    "the Shade",
+    "the Tainted",
+    "Haxxorz of 1337"
 ]
 
 skills = {
@@ -60,58 +86,75 @@ skills = {
         ""
     ],
     "java": [
-        "chugging"
+        "Chugging",
+        "Collecting garbage",
+        "Clicking the green Play button in Eclipse"
     ],
     "python": [
-        "flight"
+        "Flight",
+        "Comedy",
+        "Turning everything into a comprehension",
+        "Indenting things"
     ],
     "php": [
-        ""
+        "Introducing security vulnerabilities",
+        "Coming up with $urreal variable names"
     ],
     "cpp": [
-        "playing World of Warcraft"
+        "Playing World of Warcraft",
+        "Writing Makefiles",
+        "Dangling your pointers"
     ],
     "c#": [
-        "installing gentoo"
+        "Installing Gentoo",
+        "Writing DLLs",
+        "Wishing you were writing Powershell",
     ],
     "js": [
-        "asynchronous socialising"
+        "Asynchronous socialising",
+        "Promising to never use promises",
+        "Escaping callback hell",
+        "Touching the DOM"
     ],
     "ruby": [
-        "text speak"
+        "Text speak",
+        "Defining your models, views and controllers",
+        "Regretting that backfill"
     ],
     "haskell": [
-        "recursion"
+        "Recursion",
+        "Defining types"
     ],
     "asm": [
-        "reading binary"
+        "Reading binary"
     ],
     "sql": [
-        "typing while holding shift"
+        "Typing while holding Shift"
     ],
     "lisp": [
-        "parentheses matching"
+        "Parentheses matching"
     ],
     "go": [
-        ""
+        "Being the coolest startup"
     ],
     "rust": [
-        "claims to have contributed to the Linux kernel (all the changes were whitespace)"
+        "Claiming to have contributed to the Linux kernel (all the changes were whitespace)",
+        "Waiting for your build to compile"
     ],
 # Colours
     "blue": [
-        "swimming with electronics"
+        "Swimming with electronics"
     ],
     "white": [
-        ""
+        "Praying to the Algorithm gods"
     ],
     "red": [
-        ""
+        "Cooling your CPU"
     ],
     "black": [
-        "baking"
+        "Bringing your LAN party to a death metal concert"
     ],
     "green": [
-        ""
+        "B-Tree hugging"
     ]
 }
