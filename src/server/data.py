@@ -1,43 +1,43 @@
 classes = {
-    "Aerospace Engineering": [
+    "aero": [
         "Physicist",
         "Professional Levitator",
         "Bringer of Light"
     ],
-    "Building Engineering": [
+    "building": [
         "Wearer of Clay Pots"
     ],
-    "Civil Engineering": [
+    "civil": [
         "Cloud Architect",
         "Triceracop"
     ],
-    "Computer Engineering": [
+    "compeng": [
         "Richard Stallman Impersonator",
         "Graphics Card Smuggler"
     ],
-    "Computer Science": [
+    "compsci": [
         "Horse Surgeon",
         "Travelling Salesman"
     ],
-    "Electrical Engineering": [
+    "elec": [
         "Storm Chaser",
         "Glass Blower"
     ],
-    "Environmental Engineering": [
+    "environmental": [
         "Witch",
         "Libertarian",
         "Cat Wrangler"
     ],
-    "Industrial Engineering": [
+    "indu": [
         "Politician",
         "Foreman",
         "Genie Lamp Manufacturer"
     ],
-    "Mechanical Engineering": [
+    "mech": [
         "Blacksmith",
         "Rocket Scientist"
     ],
-    "Software Engineering": [
+    "soen": [
         "Rick",
         "Legolas Fan"
     ]
@@ -56,65 +56,62 @@ titles = [
 ]
 
 skills = {
-    "Misc": [
+    "misc": [
         ""
     ],
-    "Java": [
+    "java": [
         "chugging"
     ],
-    "Python": [
+    "python": [
         "flight"
     ],
-    "PHP": [
+    "php": [
         ""
     ],
-    "C / C++": [
+    "cpp": [
         "playing World of Warcraft"
     ],
-    "C#": [
+    "c#": [
         "installing gentoo"
     ],
-    "Javascript": [
+    "js": [
         "asynchronous socialising"
     ],
-    "Ruby": [
+    "ruby": [
         "text speak"
     ],
-    "Haskell": [
+    "haskell": [
         "recursion"
     ],
-    "Assembly": [
+    "asm": [
         "reading binary"
     ],
-    "SQL": [
+    "sql": [
         "typing while holding shift"
     ],
-    "Lisp": [
+    "lisp": [
         "parentheses matching"
     ],
-    "Go": [
+    "go": [
         ""
     ],
-    "Rust": [
+    "rust": [
         "claims to have contributed to the Linux kernel (all the changes were whitespace)"
     ],
 # Colours
-    "Blue": [
+    "blue": [
         "swimming with electronics"
     ],
-    "Yellow": [
+    "white": [
         ""
     ],
-    "Orange": [
+    "red": [
         ""
     ],
-    "Black": [
+    "black": [
         "baking"
     ],
-    "Purple": [
-        ""
-    ],
-    "Grey": [
+    "green": [
         ""
     ]
 }
