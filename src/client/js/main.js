@@ -1,4 +1,4 @@
-var serverUrl = 'http://localhost:5000/';
+var serverUrl = 'http://13.59.13.218/';
 
 function submitHandler(e) {
   e.preventDefault();
