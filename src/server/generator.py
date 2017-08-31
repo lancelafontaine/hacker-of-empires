@@ -6,7 +6,8 @@ import sqlite3
 
 allowed_hosts = [
     'http://localhost:8080',
-    'https://empires.scsconcordia.com'
+    'https://empires.scsconcordia.com',
+    'https://api.scsconcordia.com'
 ]
 
 app = Flask(__name__)
