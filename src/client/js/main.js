@@ -1,4 +1,4 @@
-var serverUrl = 'http://13.59.13.218/empires';
+var serverUrl = 'https://api.scsconcordia.com/empires';
 
 function submitHandler(e) {
   e.preventDefault();

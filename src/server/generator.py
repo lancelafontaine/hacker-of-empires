@@ -6,55 +6,51 @@ import sqlite3
 
 allowed_hosts = [
     'http://localhost:8080',
-    'https://empires.scsconcordia.com'
+    'https://empires.scsconcordia.com',
+    'https://api.scsconcordia.com'
 ]
 
 app = Flask(__name__)
 CORS(app, origins=allowed_hosts)
 
+
 @app.route('/', methods=["POST", "OPTIONS"])
 def generator():
     if request.method == "OPTIONS":
         return jsonify({})
-    if request.method == "POST":
-        data = request.get_json()
-        program = data.get("major", "soen").strip().lower()
-        language = data.get("language", "java").strip().lower()
-        colour = data.get("colour", "blue").strip().lower()
-        email = data.get("email", "fake@fake.fake").strip().lower()
 
-        save_to_db(program, language, colour, email)
+    data = request.get_json()
+    program = data.get("major", "soen").strip().lower()
+    language = data.get("language", "java").strip().lower()
+    colour = data.get("colour", "blue").strip().lower()
+    email = data.get("email", "fake@fake.fake").strip().lower()
 
-        return jsonify(text=generate(program, language, colour))
+    save_to_db(program, language, colour, email)
+
+    return jsonify(text=generate(program, language, colour))
+
 
 def generate(program, language, colour):
     rand = SystemRandom()
 
-    class_name = rand.choice(data.classes[program])
-    first_name = rand.choice(data.first_names)
-    title = rand.choice(data.titles)
-
-    misc_skill = rand.choice(data.skills["misc"])
-    language_skill = rand.choice(data.skills[language])
-    colour_skill = rand.choice(data.skills[colour])
-    skill_nums = [rand.randint(-10, 10) for i in range(3)]
-    skill_nums = [i if i < 0 else "+{}".format(i) for i in skill_nums]
+    skill_nums = [str(i) if i < 0 else "+{}".format(i) for i in range(-10, 11)]
+    skill_nums.remove("+0")
 
     response_data = {
-        "first_name": first_name,
-        "title": title,
-        "class_name": class_name,
+        "first_name": rand.choice(data.first_names),
+        "title": rand.choice(data.titles),
+        "class_name": rand.choice(data.classes[program]),
         "misc_skill": {
-            "number": str(skill_nums[0]),
-            "skill": misc_skill
+            "number": rand.choice(skill_nums),
+            "skill": rand.choice(data.skills["misc"])
         },
         "language_skill": {
-            "number": str(skill_nums[1]),
-            "skill": language_skill
+            "number": rand.choice(skill_nums),
+            "skill": rand.choice(data.skills[language])
         },
         "colour_skill": {
-            "number": str(skill_nums[2]),
-            "skill": colour_skill
+            "number": rand.choice(skill_nums),
+            "skill": rand.choice(data.skills[colour])
         }
     }
 
